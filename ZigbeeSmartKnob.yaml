@@ -1,7 +1,7 @@
 blueprint:
   name: ZigbeeSmartKnob_Light
   description: |
-    This automation allows you to use a zigbee Smart Knob to control a light.
+    This automation allows you to use a zigbee Smart Knob (Tuya ERS-10TZBVK-AA) to control a light.
 
     Functionality:
     - A single click of the wheel will toggle the light.
@@ -9,12 +9,18 @@ blueprint:
     - Pressing the wheel down and turning it while holding changes the color temperature.
     - A double click of the wheel will set the default color temperature.
 
-    The Smart Knob needs to be integrated using the zigbee2mqtt integration to have the required entities.
+    The Smart Knob needs to be integrated using the zigbee2mqtt integration to have the required entities. The device needs to be in 'COMMAND' mode configuration
 
     The light can be any light entity with a color temperatrue attribute.
 
   domain: automation
   input:
+    device_id:
+      name: Zigbee Smart Knob Device
+      description: Select your Smart Knob device.
+      selector:
+        device:h
+          multiple: false
     action_entity_id:
       name: Zigbee Smart Knob Action Entity
       description: Select the Action entity of your Smart Knob.
