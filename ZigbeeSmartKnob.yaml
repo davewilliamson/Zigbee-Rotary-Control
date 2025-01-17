@@ -19,8 +19,7 @@ blueprint:
       name: Zigbee Smart Knob Device
       description: Select your Smart Knob device.
       selector:
-        device:h
-          multiple: false
+        device:
     action_entity_id:
       name: Zigbee Smart Knob Action Entity
       description: Select the Action entity of your Smart Knob.
